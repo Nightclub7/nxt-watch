@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NXT Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation (mimicking Discord's server list) -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>NXT Watch</h1>
+        </div>
+        <div class="server-list">
+            <h3>Popular Movies</h3>
+            <ul id="sidebar-movie-list"></ul>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('home')">Home</button>
+            <button class="tab-btn" onclick="showTab('search')">Search</button>
+        </div>
+
+        <!-- Home Section (Popular Movies) -->
+        <div id="home-section" class="tab-content">
+            <h2>Popular Movies</h2>
+            <div id="movie-list"></div>
+        </div>
+
+        <!-- Search Section -->
+        <div id="search-section" class="tab-content">
+            <input type="text" id="search" placeholder="Search Movies" oninput="searchMovies()" />
+            <div id="search-results"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
